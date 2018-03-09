@@ -19,3 +19,7 @@ npm-debug.log
 
 # dist
 /dist
+
+# postgres additions
+.env
+.DS_Store

@@ -6,7 +6,7 @@
 [travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
-  
+
  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications. </p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/cqrs.svg" alt="NPM Version" /></a>
@@ -24,8 +24,13 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework **TypeScript** starter repository. 
-  
+[Nest](https://github.com/nestjs/nest) framework **TypeScript** starter repository -
+With the following additions:
+* Configure postgres with typeorm - https://docs.nestjs.com/techniques/sql
+* Add dotenv support
+* Add cors support
+* Add helmet?
+
 ## Installation
 
 ```bash
@@ -77,4 +82,3 @@ I am on a mission to provide an architecture to create truly flexible, scalable 
 <a href="https://opencollective.com/nest/backer/27/website" target="_blank"><img src="https://opencollective.com/nest/backer/27/avatar.svg"></a>
 <a href="https://opencollective.com/nest/backer/28/website" target="_blank"><img src="https://opencollective.com/nest/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/nest/backer/29/website" target="_blank"><img src="https://opencollective.com/nest/backer/29/avatar.svg"></a>
-
