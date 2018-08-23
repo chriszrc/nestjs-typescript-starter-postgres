@@ -1,20 +1,21 @@
-import { Module, MiddlewaresConsumer } from '@nestjs/common';
+import { Module, MiddlewareConsumer } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { HelmetMiddleware } from '@nest-middlewares/helmet';
 import { CorsMiddleware } from '@nest-middlewares/cors';
 
 import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot() //for config, see .env
   ],
   controllers: [AppController],
-  components: [],
+  providers: [AppService]
 })
-export class ApplicationModule {
-  configure(consumer: MiddlewaresConsumer) {
+export class AppModule {
+  configure(consumer: MiddlewareConsumer) {
         // IMPORTANT! Call Middleware.configure BEFORE using it for routes
         // ref: https://github.com/wbhob/nest-middlewares
         HelmetMiddleware.configure({

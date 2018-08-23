@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { ApplicationModule } from './app.module';
+import { AppModule } from './app.module';
 
 import * as dotenv from 'dotenv';
 import { Logger } from '@nestjs/common';
@@ -13,7 +13,7 @@ async function bootstrap() {
 	Logger.setMode((process.env.NODE_ENV === "prod") ? NestEnvironment.TEST : NestEnvironment.RUN);
 	const logger = new Logger('HttpsServer');
 
-	const app = await NestFactory.create(ApplicationModule);
+	const app = await NestFactory.create(AppModule);
 
 	//https://docs.nestjs.com/faq/global-prefix
 	app.setGlobalPrefix(process.env.APP_URL_PREFIX);
